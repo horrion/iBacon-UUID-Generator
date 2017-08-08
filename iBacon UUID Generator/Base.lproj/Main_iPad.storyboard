@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES" initialViewController="eBI-kY-mQj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="eBI-kY-mQj">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,13 +14,20 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="IBUGViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="666-cB-b3C"/>
+                        <viewControllerLayoutGuide type="bottom" id="J4X-8q-alg"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="acE-Ie-Ixf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acE-Ie-Ixf">
                                 <rect key="frame" x="203" y="463" width="363" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2ns-04-s4W"/>
+                                    <constraint firstAttribute="width" constant="363" id="6lO-Fb-ymz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Generate UUID" backgroundImage="gButton">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -28,9 +36,11 @@
                                     <action selector="generateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cep-tZ-1aL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NBc-nr-Apd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBc-nr-Apd">
                                 <rect key="frame" x="203" y="522" width="363" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="h1t-Ip-s1N"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Copy" backgroundImage="gButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,10 +50,12 @@
                                     <action selector="copyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iMs-0p-Usz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OfZ-Ir-9Ik">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfZ-Ir-9Ik">
                                 <rect key="frame" x="203" y="900" width="363" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nBD-9G-6bM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,15 +65,30 @@
                                     <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsV-1A-Caq"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="qFH-ko-zdZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFH-ko-zdZ">
                                 <rect key="frame" x="20" y="369" width="728" height="40"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kYC-SK-owa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NBc-nr-Apd" firstAttribute="top" secondItem="acE-Ie-Ixf" secondAttribute="bottom" constant="19" id="08W-nK-luh"/>
+                            <constraint firstItem="qFH-ko-zdZ" firstAttribute="top" secondItem="666-cB-b3C" secondAttribute="bottom" constant="369" id="0TD-T1-Hk3"/>
+                            <constraint firstItem="qFH-ko-zdZ" firstAttribute="centerX" secondItem="acE-Ie-Ixf" secondAttribute="centerX" id="2xl-Tv-uOb"/>
+                            <constraint firstItem="acE-Ie-Ixf" firstAttribute="top" secondItem="qFH-ko-zdZ" secondAttribute="bottom" constant="54" id="9Y6-f6-kjv"/>
+                            <constraint firstAttribute="bottom" secondItem="OfZ-Ir-9Ik" secondAttribute="bottom" constant="20" symbolic="YES" id="M4S-74-Fe5"/>
+                            <constraint firstItem="NBc-nr-Apd" firstAttribute="leading" secondItem="OfZ-Ir-9Ik" secondAttribute="leading" id="atm-ka-ASS"/>
+                            <constraint firstItem="acE-Ie-Ixf" firstAttribute="trailing" secondItem="NBc-nr-Apd" secondAttribute="trailing" id="hPO-Bz-sTA"/>
+                            <constraint firstItem="qFH-ko-zdZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kbc-QJ-y29"/>
+                            <constraint firstItem="acE-Ie-Ixf" firstAttribute="leading" secondItem="NBc-nr-Apd" secondAttribute="leading" id="koi-QT-x4J"/>
+                            <constraint firstItem="qFH-ko-zdZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kuY-FN-sZq"/>
+                            <constraint firstItem="NBc-nr-Apd" firstAttribute="trailing" secondItem="OfZ-Ir-9Ik" secondAttribute="trailing" id="wEJ-SY-loX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hhC-7h-NF8"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

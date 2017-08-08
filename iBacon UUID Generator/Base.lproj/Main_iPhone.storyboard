@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="tle-mz-gti">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="tle-mz-gti">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,13 +14,19 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController title="iBacon UUID" id="vXZ-lx-hvc" customClass="IBUGViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uDe-Wy-Hck"/>
+                        <viewControllerLayoutGuide type="bottom" id="elp-hy-OjO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xWL-RJ-EHq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWL-RJ-EHq">
                                 <rect key="frame" x="20" y="157" width="335" height="40"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zcI-Qo-VOs"/>
+                                </constraints>
                                 <state key="normal" title="Generate" backgroundImage="gButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -28,16 +35,17 @@
                                     <action selector="generateButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="V11-Up-6p1"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="crU-MH-h7G">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crU-MH-h7G">
                                 <rect key="frame" x="20" y="85" width="335" height="52"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="oIS-ud-mBg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x89-vh-zwP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x89-vh-zwP">
                                 <rect key="frame" x="20" y="553" width="339" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,9 +55,11 @@
                                     <action selector="clearButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nMV-P3-p4u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mxn-iH-obv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxn-iH-obv">
                                 <rect key="frame" x="20" y="205" width="335" height="40"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IS5-yw-fgj"/>
+                                </constraints>
                                 <state key="normal" title="Copy" backgroundImage="gButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,6 +70,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mxn-iH-obv" firstAttribute="leading" secondItem="x89-vh-zwP" secondAttribute="leading" id="1ec-qg-JAr"/>
+                            <constraint firstItem="crU-MH-h7G" firstAttribute="leading" secondItem="xWL-RJ-EHq" secondAttribute="leading" id="Bd5-ch-uFG"/>
+                            <constraint firstItem="mxn-iH-obv" firstAttribute="top" secondItem="xWL-RJ-EHq" secondAttribute="bottom" constant="8" symbolic="YES" id="Oyp-8P-RfF"/>
+                            <constraint firstItem="xWL-RJ-EHq" firstAttribute="leading" secondItem="mxn-iH-obv" secondAttribute="leading" id="VIv-3a-uq5"/>
+                            <constraint firstItem="crU-MH-h7G" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="Vc7-qC-MAp"/>
+                            <constraint firstItem="x89-vh-zwP" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Zwd-ln-5E1"/>
+                            <constraint firstItem="crU-MH-h7G" firstAttribute="top" secondItem="uDe-Wy-Hck" secondAttribute="bottom" constant="85" id="jDY-lx-eYM"/>
+                            <constraint firstItem="crU-MH-h7G" firstAttribute="trailing" secondItem="xWL-RJ-EHq" secondAttribute="trailing" id="mLJ-zX-cEJ"/>
+                            <constraint firstItem="xWL-RJ-EHq" firstAttribute="top" secondItem="crU-MH-h7G" secondAttribute="bottom" constant="20" id="mlO-OS-Hgz"/>
+                            <constraint firstItem="xWL-RJ-EHq" firstAttribute="trailing" secondItem="mxn-iH-obv" secondAttribute="trailing" id="qm7-bi-GoN"/>
+                            <constraint firstItem="crU-MH-h7G" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="rXO-Xw-5OB"/>
+                            <constraint firstAttribute="bottom" secondItem="x89-vh-zwP" secondAttribute="bottom" constant="20" symbolic="YES" id="x8z-oT-tnC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GCR-fu-ouI"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
