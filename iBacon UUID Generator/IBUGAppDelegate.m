@@ -12,6 +12,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"IsNotFirstLaunch"])
+    {}
+    else
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"IsNotFirstLaunch"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
     // Override point for customization after application launch.
     return YES;
 }

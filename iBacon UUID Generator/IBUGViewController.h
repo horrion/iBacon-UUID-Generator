@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface IBUGViewController : UIViewController
+{
+    IBOutlet UITextView *uuidTF;
+    
+    UIBarButtonItem *shareButton;
+}
+
+-(IBAction)generateButton:(id)sender;
+-(IBAction)clearButton:(id)sender;
+-(IBAction)copyButton:(id)sender;
 
 @end

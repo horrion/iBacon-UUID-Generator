@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E189CCC31959F3E30015BA13"
-               BuildableName = "iBacon UUID Generator.app"
-               BlueprintName = "iBacon UUID Generator"
+               BuildableName = "iBacon UUID.app"
+               BlueprintName = "iBacon UUID"
                ReferencedContainer = "container:iBacon UUID Generator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E189CCC31959F3E30015BA13"
-            BuildableName = "iBacon UUID Generator.app"
-            BlueprintName = "iBacon UUID Generator"
+            BuildableName = "iBacon UUID.app"
+            BlueprintName = "iBacon UUID"
             ReferencedContainer = "container:iBacon UUID Generator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E189CCC31959F3E30015BA13"
-            BuildableName = "iBacon UUID Generator.app"
-            BlueprintName = "iBacon UUID Generator"
+            BuildableName = "iBacon UUID.app"
+            BlueprintName = "iBacon UUID"
             ReferencedContainer = "container:iBacon UUID Generator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E189CCC31959F3E30015BA13"
-            BuildableName = "iBacon UUID Generator.app"
-            BlueprintName = "iBacon UUID Generator"
+            BuildableName = "iBacon UUID.app"
+            BlueprintName = "iBacon UUID"
             ReferencedContainer = "container:iBacon UUID Generator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
